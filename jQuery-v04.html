@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>T4</title>
+    <script src="js/jquery-1.12.3.js"></script>
+    <script>
+        $(function(){
+           $('button').click(function(){
+              alert($('.o2').text());
+           });
+        });
+    </script>
+</head>
+<body>
+<select id="myselect">
+    <option value="1">Option-1</option>
+    <option class="o2" value="2">Option-2</option>
+    <option value="3">Option-3</option>
+</select>
+<button>click me.....</button>
+</body>
+</html>

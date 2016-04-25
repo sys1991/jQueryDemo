@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>exercise</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        #div1 {
+            width: 1000px;
+            height: 3000px;
+            /*border: 1px solid black;*/
+            background: #ccc;
+            margin: auto;
+
+        }
+
+        #top {
+            /*position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 50px;
+            background: deepskyblue;
+            color: floralwhite;
+            font-weight: bolder;
+            line-height: 50px;
+            text-align: center;
+            border-top-right-radius: 5px;
+            display: none;*/
+            font-family: Arial, serif;
+            font-weight: bolder;
+            line-height: 100px;
+            text-align: center;
+            width: 50px;
+            height: 100px;
+            background: #369;
+            color: #147;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            display: none;
+            border-top-right-radius: 5px;
+        }
+        #top:hover {
+            cursor: pointer;/*鼠标指针变化*/
+            background: #900;
+            color: #ddd;
+        }
+    </style>
+    <script src="js/jquery-1.12.3.js"></script>
+    <script>
+        $(function () {
+            var top=$('#top');
+            $(Window).scroll(function(){
+               if($(this).scrollTop()>200){
+                   top.css('left', $(this).width() / 2 + 500);
+                   top.fadeIn('slow');
+               }else {
+                   top.fadeOut('slow');
+               }
+            });
+            top.click(function(){
+                $(Window).scrollTop(0);
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="div1"></div>
+<div id="top">TOP</div>
+</body>
+</html>
