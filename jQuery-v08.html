@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>T8</title>
+    <script src="js/jquery-1.12.3.js"></script>
+    <script>
+        $(function(){
+            $('ul li:first').prepend("<b>0:");
+            $('ul li:last').prepend("<b>2:");
+            $('ul li:first').next().prepend("<b>1:");
+
+        })
+    </script>
+</head>
+<body>
+<ul>
+    <li>Html Tutorial</li>
+    <li>Mongodb Tutorial</li>
+    <li>Python Tutorial</li>
+</ul>
+
+</body>
+</html>
